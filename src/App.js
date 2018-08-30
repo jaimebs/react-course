@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './components/navbar'
 import Home from './components/home'
-import Sobre from './components/sobre'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import User from './components/user'
+import Comentario from './components/comentario'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -11,7 +12,8 @@ class App extends Component {
         <div>
           <Navbar titulo="Project" />
           <Route exact path="/" component={Home} />
-          <Route path="/sobre" component={Sobre} />
+          <Route path="/user" component={User} />
+          <Route path="/comentario" component={Comentario} />
         </div>
       </Router>
     );
