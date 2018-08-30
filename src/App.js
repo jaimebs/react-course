@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Navbar from './components/navbar'
-import './App.css';
+import Home from './components/home'
+import Sobre from './components/sobre'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Navbar/>
-      </div>
+      <Router>
+        <div>
+          <Navbar titulo="Project" />
+          <Route exact path="/" component={Home} />
+          <Route path="/sobre" component={Sobre} />
+        </div>
+      </Router>
     );
   }
 }
