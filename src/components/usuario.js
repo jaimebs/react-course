@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import API from '../api'
+import { Link } from "react-router-dom";
 
-export default class user extends Component {
+export default class usuario extends Component {
     state = {
         usuarios: []
     }
@@ -28,10 +29,11 @@ export default class user extends Component {
                 <table className="table table-striped">
                     <thead className="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Nick</th>
-                            <th scope="col">Email</th>
+                            <th className="col-col-md-1">#</th>
+                            <th className="col-col-md-6">Nome</th>
+                            <th className="col-col-md-1">Nick</th>
+                            <th className="col-col-md-3">Email</th>
+                            <th className="col-col-md-1">Ação</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,6 +43,7 @@ export default class user extends Component {
                                 <td>{usuario.name}</td>
                                 <td>{usuario.username}</td>
                                 <td>{usuario.email}</td>
+                                <td><Link to={`/usuario/${usuario.id}`} className="btn btn-dark">Detalhe</Link></td>
                             </tr>
                         )
                         }
