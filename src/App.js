@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from './components/navbar'
-import Home from './components/home'
-import Usuario from './components/usuario'
-import UsuarioForm from './components/usuario-form'
-import Comentario from './components/comentario'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from './components/navbar/navbar';
+import Home from './components//home/home';
+import Usuario from './components/usuario/usuario';
+import UsuarioForm from './components/usuario/usuario-form';
+import Comentario from './components/comentario/comentario';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
